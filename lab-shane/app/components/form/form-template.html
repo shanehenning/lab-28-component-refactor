@@ -1,0 +1,5 @@
+<form ng-submit="fc.saveOrReset(fc.list)" novalidate>
+    <label for="list-name">List Name: </label>
+    <input name="list-name" ng-model="fc.list.name" value="{{fc.inputValue}}"></input>
+    <button type="submit">{{fc.buttonCommand}}</button>
+</form>

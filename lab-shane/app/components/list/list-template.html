@@ -1,0 +1,30 @@
+<div ng-init="lc.getAllLists()">
+    <h1>Make a List!</h1>
+    <div class="form" data-sh-form button-command="Create List" borrow="lc.createList(list)" list="list">
+    </div>
+    <h3>All Lists</h3>
+    <div class="listing" data-ng-repeat="list in lc.lists">
+        <span>
+          <div class="form" data-sh-form ng-if="list.edit" button-command="Update" borrow="lc.updateList(list)" input-value="list.name" list="list">
+          </div>
+          <p ng-if="!list.edit">
+            {{list.name}}
+            <button type="submit" ng-click="list.edit = true" ng-if="!list.edit">Edit</button>
+          </p>
+          <button type="submit" ng-click="list.edit = false" ng-if="list.edit">Cancel</button>
+          <button type="submit" ng-click="lc.deleteList(list)" ng-if="list.edit">Delete List</button>
+        </span>
+        <!-- <div data-ng-repeat="note in list.notes">
+          <span>
+            <div data-sh-note-form ng-if="note.edit" button-command="Update" borrow="lc.updateNote(note)" note-value-name="note.name" note-value-content="note.content" note="note">
+            </div>
+              <h5 ng-if="!note.edit">{{note.name}}
+                <button type="submit" ng-click="note.edit = true" ng-if="!note.edit">Edit</button>
+              </h5>
+              <p>{{note.content}}</p>
+              <button type="submit" ng-click="note.edit = false" ng-if="note.edit">Cancel</button>
+              <button type="submit" ng-click="lc.deleteNote(note)" ng-if="note.edit">Delete Note</button>
+          </span>
+        </div> -->
+    </div>
+</div>

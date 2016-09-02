@@ -1,0 +1,45 @@
+// vendor styles
+@import "vendor/normalize/_normalize.scss";
+@import "vendor/bootstrap/stylesheets/_bootstrap.scss";
+@import "vendor/font-awesome/scss/font-awesome.scss";
+@include normalize();
+// app styles
+@import "_theme";
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: $app-default;
+}
+
+.brand {
+  font-size: 1em;
+}
+
+hr {
+  border-top: 1px solid #8c8b8b;
+}
+
+.listing{
+  width: 90%;
+  padding: 1em;
+  margin: 0 auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  box-shadow: inset 0.25px 0.25px 0.25px 0.25px rgba(0,0,0,1);
+}
+
+// .list{
+//   background-color: blue;
+// }
+//
+// .form{
+//   background-color: green;
+// }
+//
+// .listing{
+//   background-color: gray;
+// }
